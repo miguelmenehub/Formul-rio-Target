@@ -1,0 +1,85 @@
+1)Observe o trecho de código abaixo:
+
+int INDICE = 13, SOMA = 0, K = 0;
+
+enquanto K < INDICE faça
+
+{
+
+K = K + 1;
+
+SOMA = SOMA + K;
+
+}
+
+imprimir(SOMA);
+
+
+Ao final do processamento, qual será o valor da variável SOMA?
+
+RESPOSTA: 91.
+
+2)Dado a sequência de Fibonacci, onde se inicia por 0 e 1 e o próximo valor sempre será a soma dos 2 valores anteriores (exemplo: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34...), escreva um programa na linguagem que desejar onde, informado um número, ele calcule a sequência de Fibonacci e retorne uma mensagem avisando se o número informado pertence ou não a sequência. 
+import java.util.Scanner;
+
+public class Fibonacci{
+    public static void main(String[] args) {
+          Scanner sc = new Scanner(System.in);   
+          System.out.print("Insira até qual valor vai sua sequência de FIBONACCI: ");
+          int n = sc.nextInt();
+          sc.close();
+          int a = 0;
+          int b = 1;
+          int aux;
+          for (int i =1; i <= n; i++){
+            System.out.print(a + " - ");
+            aux = a;
+            a = a+b;
+            b = aux;
+                        
+        }
+
+
+    }
+}
+
+Descubra a lógica e complete o próximo elemento:
+
+a) 1, 3, 5, 7 - 9
+
+b) 2, 4, 8, 16, 32, 64 - 128
+
+c) 0, 1, 4, 9, 16, 25, 36 - 49
+
+d) 4, 16, 36, 64 - 100
+
+e) 1, 1, 2, 3, 5, 8 - 13
+
+f) 2,10, 12, 16, 17, 18, 19 - 23
+
+4) Você está em uma sala com três interruptores, cada um conectado a uma lâmpada em uma sala diferente. Você não pode ver as lâmpadas da sala em que está, mas pode ligar e desligar os interruptores quantas vezes quiser. Seu objetivo é descobrir qual interruptor controla qual lâmpada.
+Como você faria para descobrir, usando apenas duas idas até uma das salas das lâmpadas, qual interruptor controla cada lâmpada?
+
+Entendendo que há 3 salas cada um com uma lâmpadas:
+Resposta:
+Ligo o primeiro interruptor e aguardo por minutos. Depois desligo o primeiro interruptor e ligo o segundo, logo depois vou até a sala se a lâmpada estiver acesa quer dizer que o segundo interruptor acende a lâmpada
+se a lâmpada estiver apagada e porém estar quente ao tocar, quer dizer que o primeiro interruptor acende a lâmpada, mas se a lâmpada estiver apagada mas fria, significa que o terceiro interruptor acende a lâmpada.
+
+5) Escreva um programa que inverta os caracteres de uma string:
+
+Resposta:
+import java.util.Scanner;
+
+public class Revword{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Insira a Palavra a ser invertida: ");
+        String ent = sc.nextLine();
+        String saida = "";
+        for (int i = ent.length() - 1; i >=0; i-- ){
+            saida += ent.charAt(i);
+          
+        }
+        System.out.printf("A palavra %s invertida é: %s",ent, saida);
+    }
+}
